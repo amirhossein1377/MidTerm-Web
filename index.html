@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gender Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="javascript/script.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="content">
+        <div class="content-left">
+            <form onsubmit="submitForm(event)">
+
+                <h1>Mr. or Ms.?</h1>
+
+                <div class="w-100">
+                    <label for="name">name</label>
+                    <input type="text" class="w-100" id="name" onkeypress="nameInputChange(event)">
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="w-100">
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">male</label>
+
+                </div>
+
+                <div class="w-100">
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">female</label>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="w-100">
+                    <button type="submit" class="btn">submit</button>
+                    <button type="button" class="btn" onclick="savePrediction()">save</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="content-right">
+            <h1>Prediction</h1>
+
+            <div class="w-100">
+                <p id="gender-prediction"></p>
+                <p id="probability-prediction"></p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="w-100 answer-box">
+                <h3>Saved Answer</h3>
+                <p id="name-saved"></p>
+                <p id="gender-prediction-saved"></p>
+                <button class="btn" onclick="clearPrediction()">clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="internet-error" class="error d-none">
+    <div class="error-icon">ERROR</div>
+    <div>
+        <p>Please check your connection</p>
+    </div>
+</div>
+
+<div id="error" class="error d-none">
+    <div class="error-icon">ERROR</div>
+    <div>
+        <p>Name is not valid</p>
+    </div>
+    <button type="button" class="btn" onclick="hideError()">OK</button>
+</div>
+
+</body>
+</html>

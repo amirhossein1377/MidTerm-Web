@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: Barlow;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* full size container include background image */
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../images/main-background.jpg");
+    background-size: cover;
+}
+
+
+/* centered content that includes main content */
+.content {
+    display: flex;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    background: white;
+    opacity: 0.85;
+}
+
+
+/* right children of main content */
+.content-right {
+    padding-left: 1rem;
+}
+
+/* left children of main content */
+.content-left {
+    padding-right: 1rem;
+}
+
+/* set width to 100% */
+.w-100 {
+    width: 100% !important;
+}
+
+/* divider that have border */
+.divider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0,0,0,0.25);
+}
+
+/* just a little margin top :) */
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+/* to style buttons that we have in document */
+.btn {
+    border: 1px solid rgba(0,0,0,0.25);
+    padding: 0.5rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* previous button :) just add style for hover */
+.btn:hover {
+    background: #dbdbdb;
+}
+
+/* style for answer box -> one of the children right content */
+.answer-box {
+    border: 1px dashed rgba(0,0,0,0.25);
+    padding: 0.5rem;
+}
+
+/* error dialog that is full screen */
+.error {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    z-index: 100;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+/* error text that is in error dialog */
+.error-icon {
+    font-size: 3rem;
+    color: red;
+    font-weight: 800;
+}
+
+/* to set display none to an element just use this class :) */
+.d-none {
+    display: none !important;
+}
